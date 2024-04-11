@@ -321,7 +321,7 @@ body {
 
   .mid {
     margin-top: 100px;
-    text-align: center; /* Alinha o conteúdo à esquerda */
+    
     margin-bottom: 20px; /* Adiciona espaço entre .mid e .social-icons */
   }
 
@@ -331,7 +331,7 @@ body {
   }
 
   .social-icons {
-    text-align: center;
+    
     margin-top: 10px;
      margin-bottom: 20px; /* Adiciona espaço abaixo dos ícones sociais */
   }

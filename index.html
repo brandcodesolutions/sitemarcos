@@ -1,125 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<title>Carrossel com Divs</title>
+
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* para evitar barras de rolagem */
+    }
+
+    .top-area {
+        background-color: #fff; /* cor de fundo da área */
+        color: #333; /* cor do texto */
+        padding: 10px; /* espaçamento interno */
+        text-align: left; /* alinhamento do texto à esquerda */
+        width: 100%; /* largura total */
+        position: fixed; /* posição fixa para ficar no topo */
+        top: 0; /* alinhar no topo */
+        z-index: 1000; /* garantir que fique acima do conteúdo */
+        display: flex; /* torna o conteúdo flexível */
+        justify-content: flex-start; /* alinha o conteúdo no início */
+        align-items: center; /* alinha verticalmente ao centro */
+    }
+
+    .navbar {
+        position: relative; /* mudado para relativo */
+        width: 100%;
+        margin-top: 50px; /* margem superior para a barra de navegação */
+    }
+
+    .content {
+        position: relative;
+        margin-top: 100px; /* altura da barra de navegação */
+        height: calc(100vh - 50px); /* ajusta a altura da imagem de fundo para ocupar toda a tela, descontando a altura da barra de navegação */
+        overflow: hidden; /* oculta conteúdo fora da área do carrossel */
+    }
+
+    .carousel {
+        display: flex; /* torna os divs filhos flexíveis */
+        transition: transform 0.5s ease; /* animação suave de transição */
+        margin-top: 35px;
+    }
+
+    .slide {
+        min-width: 100%; /* cada div é do tamanho da tela */
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1001; /* garante que os botões estejam acima das imagens */
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+        
+    }
+    .slide img {
+    width: 100%;
+    height: auto;
+}
+
+.logo {
+    max-width: 100px; /* ajuste o tamanho máximo conforme necessário */
+    margin-right: 20px; /* espaçamento à direita */
+}
+
+.social-icons {
+    display: flex; /* torna os ícones flexíveis */
+    
+}
+
+.icon {
+    margin-right: 10px; /* espaçamento entre os ícones */
+    color: #808080;
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+.home {
+    position: absolute;
+    top: 10px; /* ajuste conforme necessário */
+    right: 130px; /* ajuste conforme necessário */
+    font-size: 20px; /* ajuste conforme necessário */
+    color: #808080; /* cor do texto */
+    margin-top: 40px;
+}
+
+
+
+</style>
 </head>
 <body>
-  
-</body>
 
-<main>
-  <img src="imgs/logotipo.PNG" alt="Logotipo" class="logo">
-  <div class=left>
-    <div class="navbar flex">
-      <div class="backIcon" >
-        <a href="#"><i style="color: white ;" class="fa-solid fa-arrow-left"></i></a>
-      </div>
-      <div class="menu">
-        <ul class="flex list">
-          <li style="margin-top: 50px;"><a href="#" class="before" style="color: rgb(71, 71, 71);">HOME</a></li>
-
-            
-            
-        </ul>
-      </div>
-    </div>
-    <div class="mid">
-      
-      <p class="para">SOBRE</p> <br>
-      <p class="para">PROJETOS ARQUITETÔNICOS</p> <br>
-      <p class="para">PROJETOS DE INTERIORES</p> <br>
-      <p class="para">PROJETOS PAISAGISTICOS</p> <br>
-      <p class="para">PROJETOS COMPLEMENTARES</p> <br>
-      <p class="para"></p> 
-      
-     
-    </div>
-
+<div class="top-area">
+    <img src="imgs/logotipo.PNG" alt="Logotipo" class="logo">
     <div class="social-icons">
-      <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="icon facebook"><i class="fab fa-facebook"></i></a>
-      <a href="#" class="icon pinterest"><i class="fab fa-pinterest"></i></a>
+        <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icon facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="icon pinterest"><i class="fab fa-pinterest"></i></a>
     </div>
+    <a href="home.html" class="home">Home</a>
+</div>
 
-    <div class=".top" style="margin-top: 20px ;">
-      
-      <p class="paras">+55 11 97773-5354</p> <br>
-      <p class="paras">Marcosfilhointeriores@gmIl.com</p> <br> <br> <br>
-      <p class="paras">Rua Fernando de Albuquerque, 31
-      </p> <br>
-      <p class="paras">Sala 61 - Consolação 
-      </p> <br>
-      <p class="paras">São Paulo - SP, 01309-030</p> <br>
-      <p class="paras"></p> 
-      
-     
-    </div>
-    
-    <style>
-    
-    </style>
-    </div>
-  <div class="right">
-    <div class="top">
-      <div class="topLeft">
-        <div class="carousel">
-          <img class="carousel-image" src="./imgs/IMG_6391.jpg" alt="Image 1">
-          <img class="carousel-image" src="./imgs/IMG_6392.jpg" alt="Image 2">
-          <img class="carousel-image" src="./imgs/IMG_6393.jpg" alt="Image 3">
-          <!-- Adicione quantas imagens desejar -->
+
+<div class="navbar">
+    <!-- Aqui você pode adicionar sua barra de navegação -->
+    <!-- Exemplo: -->
+    <!-- <nav>
+        <ul>
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav> -->
+</div>
+
+<div class="content">
+    <div class="carousel">
+        <div class="slide">
+            <img src="imgs/inicio 1 teste.jpg" alt="Slide 1">
         </div>
-      </div>
+        <div class="slide">
+            <img src="imgs/área inicial 5.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="imgs/área inicial 5.jpg" alt="Slide 3">
+        </div>
+        <!-- Adicione mais divs .slide conforme necessário para mais imagens -->
     </div>
-  </div>
-  
-
-  <script>
-    // Seleciona o logotipo
-    const logo = document.querySelector('.logo');
-  
-    // Define uma função para animar a rotação do logotipo
-    function rotateLogo() {
-      logo.style.transform = 'rotate(1deg)'; // Aplica uma rotação de 1 grau
-    }
-  
-    // Chama a função rotateLogo a cada 10 milissegundos para criar uma animação contínua
-    setInterval(rotateLogo, 10);
-  </script>
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+</div>
 
 <script>
-  // Seleciona todos os links internos
-  const links = document.querySelectorAll('a[href^="#"]');
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
 
-  // Define uma função para animar o deslocamento suave
-  function smoothScroll(event) {
-    event.preventDefault(); // Impede o comportamento padrão de clicar no link
+    function showSlide(index) {
+        if (index < 0) {
+            currentIndex = totalSlides - 1;
+        } else if (index >= totalSlides) {
+            currentIndex = 0;
+        } else {
+            currentIndex = index;
+        }
 
-    const targetId = this.getAttribute('href'); // Obtém o ID do alvo do link
-    const targetElement = document.querySelector(targetId); // Seleciona o elemento alvo
+        const offset = -currentIndex * 100;
+        document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+    }
 
-    // Calcula a posição do elemento alvo na página
-    const targetOffset = targetElement.offsetTop;
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
 
-    // Desloca suavemente a página até a posição do elemento alvo
-    window.scrollTo({
-      top: targetOffset,
-      behavior: 'smooth'
-    });
-  }
-
-  // Adiciona um event listener para cada link interno
-  links.forEach(link => {
-    link.addEventListener('click', smoothScroll);
-  });
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
 </script>
 
-<script src="script.js"></script>
-  
-</main>
-
+</body>
 </html>

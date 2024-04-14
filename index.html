@@ -13,7 +13,6 @@
         padding: 0;
         overflow: hidden; /* para evitar barras de rolagem */
     }
-
     .top-area {
         background-color: #fff; /* cor de fundo da área */
         color: #333; /* cor do texto */
@@ -26,18 +25,19 @@
         display: flex; /* torna o conteúdo flexível */
         justify-content: flex-start; /* alinha o conteúdo no início */
         align-items: center; /* alinha verticalmente ao centro */
+        height: 75px; /* altura desejada */
     }
 
     .navbar {
         position: relative; /* mudado para relativo */
         width: 100%;
-        margin-top: 50px; /* margem superior para a barra de navegação */
+        margin-top: 75px; /* margem superior para a barra de navegação */
     }
 
     .content {
         position: relative;
-        margin-top: 100px; /* altura da barra de navegação */
-        height: calc(100vh - 50px); /* ajusta a altura da imagem de fundo para ocupar toda a tela, descontando a altura da barra de navegação */
+        margin-top: 75px; /* margem superior para a barra de navegação */
+        height: calc(100vh - 75px); /* ajusta a altura da imagem de fundo para ocupar 75% da tela */
         overflow: hidden; /* oculta conteúdo fora da área do carrossel */
     }
 
@@ -49,6 +49,12 @@
 
     .slide {
         min-width: 100%; /* cada div é do tamanho da tela */
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ajuste para cobrir o contêiner mantendo a proporção */
     }
 
     .prev, .next {
@@ -67,13 +73,14 @@
     }
 
     .next {
-        right: 10px;
-        
+        right: 10px;   
     }
+   
     .slide img {
-    width: 100%;
-    height: auto;
-}
+        width: 100%;
+        height: 100vh;
+        object-fit: cover; /* Ajuste para caber completamente dentro do contêiner */
+    }
 
 .logo {
     max-width: 100px; /* ajuste o tamanho máximo conforme necessário */
@@ -100,7 +107,25 @@
     color: #808080; /* cor do texto */
     margin-top: 40px;
 }
+/* Estilos para dispositivos maiores */
+.area-home {
+  float: left;
+  margin-left: 900px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #333;
+}
 
+@media only screen and (max-width: 600px) {
+  .area-home {
+    float: left;
+    margin-left: 10px;
+    text-decoration: none;
+  font-size: 20px;
+  color: #333;
+  
+  }
+}
 
 
 </style>
@@ -114,7 +139,7 @@
         <a href="#" class="icon facebook"><i class="fab fa-facebook"></i></a>
         <a href="#" class="icon pinterest"><i class="fab fa-pinterest"></i></a>
     </div>
-    <a href="home.html" class="home">Home</a>
+    <a href="home.html" class="area-home">Home</a>
 </div>
 
 
@@ -133,13 +158,13 @@
 <div class="content">
     <div class="carousel">
         <div class="slide">
-            <img src="imgs/inicio 1 teste.jpg" alt="Slide 1">
+            <img src="imgs/imagem 1 banner inicial.jpg" alt="Slide 1">
         </div>
         <div class="slide">
-            <img src="imgs/área inicial 5.jpg" alt="Slide 2">
+            <img src="imgs/imagem 2 banner incial.jpg" alt="Slide 2">
         </div>
         <div class="slide">
-            <img src="imgs/área inicial 5.jpg" alt="Slide 3">
+            <img src="imgs/imagem 3 banner inicial.jpg" alt="Slide 3">
         </div>
         <!-- Adicione mais divs .slide conforme necessário para mais imagens -->
     </div>

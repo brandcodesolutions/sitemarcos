@@ -365,5 +365,12 @@ body {
         text-align: center; /* Alinha o conteúdo ao centro em telas menores que 769px */
         margin-top: 100px; /* Espaçamento superior para celular */
     }
-}
+    
+      .carousel-image {
+        width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+        height: 600px; /* Altura fixa para as imagens em dispositivos móveis */
+        object-fit: cover; /* Redimensiona a imagem mantendo a proporção e cortando o excesso */
+      }
+    }
+
 

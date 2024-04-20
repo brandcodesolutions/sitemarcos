@@ -214,7 +214,7 @@ main{
   left: 0;
   width: 100%;
   height: 0.5px; /* Espessura do sublinhado */
-  background-color: #808080; /* Cor do sublinhado (cinza) */
+  background-color: white; /* Cor do sublinhado (cinza) */
   transition: height 0.3s ease; /* Animação de crescimento do sublinhado */
   transform-origin: bottom left;
 }
@@ -232,6 +232,8 @@ main{
   text-decoration: none; /* Remove o sublinhado padrão */
   transition: color 0.3s ease; /* Animação de mudança de cor do texto */
 }
+
+
 
 .paras {
   display: inline-block;

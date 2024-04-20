@@ -38,66 +38,44 @@
       right: 10px;
     }
 
-    @media only screen and (max-width: 768px) {
-      .carousel {
-        width: 100%; /* Resetar a largura para ocupar toda a tela */
-        float: none; /* Remover a flutuação */
-        margin-top: 0px;
-      }
-      .prev {
-      margin-top: -200px;
-    }
-    .next {
-      margin-top: -200px;
-    }
-    }
-
     @media only screen and (max-width: 480px) {
-      .carousel-image {
-        width: px; /* Garante que a imagem não ultrapasse a largura do dispositivo */
-        height: 400px;
-        max-height: 500px; /* Mantém a proporção da imagem */
-      }
-    }
-
-    @media only screen and (max-width: 768px) {
-      .carousel {
-        width: 100%; /* Resetar a largura para ocupar toda a tela */
-        float: none; /* Remover a flutuação */
-        margin-top: 0px;
-      }
-      .prev {
-      margin-top: -200px;
-    }
-    .next {
-      margin-top: -200px;
-    }
-    }
-
-    @media only screen and (max-width: 480px) {
-      .carousel-image {
-        max-width: 500px; /* Garante que a imagem não ultrapasse a largura do dispositivo */
-        height: 450px; /* Mantém a proporção da imagem */
-      }
-    }
-
-    @media only screen and (max-width: 480px) {
-  .mid .para {
-    margin-bottom: -3px; /* Ajuste o espaçamento entre os parágrafos */
+  .carousel-image {
+    width: 100%; /* Garante que a imagem não ultrapasse a largura do dispositivo */
+    height: 400px; /* Altura fixa para evitar espaços em branco abaixo das imagens */
+    max-height: 500px; /* Limite máximo de altura */
+    object-fit: cover; /* Preenche o espaço do contêiner mantendo a proporção */
   }
 }
 
+/* Media query para telas menores que 768px */
+@media only screen and (max-width: 768px) {
+  .carousel {
+    width: 100%; /* Resetar a largura para ocupar toda a tela */
+    float: none; /* Remover a flutuação */
+    margin-top: 0px;
+  }
+  .prev,
+  .next {
+    margin-top: -200px;
+  }
+}
+
+/* Media query para telas menores que 480px */
 @media only screen and (max-width: 480px) {
   .carousel-image {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain; /* Garante que a imagem seja exibida completamente */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do dispositivo */
+    height: auto; /* Ajusta a altura automaticamente */
+    object-fit: cover; /* Preenche o espaço do contêiner mantendo a proporção */
   }
   .carousel {
     height: auto; /* Ajusta a altura automaticamente de acordo com a altura das imagens */
     margin-top: 100px; /* Adiciona um espaço extra acima do carrossel */
   }
+  .mid .para {
+    margin-bottom: -3px; /* Ajuste o espaçamento entre os parágrafos */
+  }
 }
+
 
   </style>
 </head>
